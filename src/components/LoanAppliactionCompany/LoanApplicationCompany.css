@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  margin: 3rem 15rem 3rem 15rem;
+  background-color: rgb(245, 245, 245);
+}
+
+.btn-form {
+  margin: 3rem 5rem 2rem 5rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  background-color: rgba(208, 35, 44);
+  color: whitesmoke;
+}
+
+.form-fields-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.label {
+  text-align: left;
+}
+
+.logo-form {
+  width: 15rem;
+}
+
+.required-alert {
+  text-align: left;
+  color: grey;
+  margin-top: 0.25rem;
+}
