@@ -3,6 +3,7 @@ import { LoanApplicationCompanyModule} from "./components/LoanAppliactionCompany
 export default function Root(props) {
   return (
     <>
+    <h5>MiniApp1</h5>
       <div>
       <ConstructionLoanApplicationForm />
       </div>
