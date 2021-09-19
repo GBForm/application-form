@@ -10,10 +10,15 @@ describe("Root component", () => {
   });
 });
 
-
 // This test is making sure that the form properly capotured and set the value of firstName in local storage to a not null or undefined value
+// Currently this test
 describe("Loan Appliaction Component", () => {
-  it("should have a local storage value for firstName not be null or undefined", () => {
-    expect(localStorage.getItem("firstName").toBe( !null || !undefined));
+  it("should have a local storage value for firstName not be null", () => {
+    const firstName = localStorage.getItem("firstName");
+    expect(firstName).toBe(!null);
+  });
+  it("should have a local storage value for firstName not be undefined", () => {
+    const firstName = localStorage.getItem("firstName");
+    expect(firstName).toBe(!undefined);
   });
 });
