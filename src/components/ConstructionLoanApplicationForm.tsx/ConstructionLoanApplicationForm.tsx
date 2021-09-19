@@ -16,7 +16,7 @@ let history: any = null;
 const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
   const { touched, errors, isSubmitting, message } = props;
 
-  // history = useHistory();
+  // history = useHistory()
 
   return (
     <>

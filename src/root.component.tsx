@@ -3,7 +3,7 @@ import { ConstructionLoanApplicationForm } from "./components/ConstructionLoanAp
 export default function Root(props) {
   return (
     <>
-    <ConstructionLoanApplicationForm />
+      <ConstructionLoanApplicationForm />
       <section>{props.name} is mounted!</section>
     </>
   );
