@@ -4,12 +4,12 @@ import { iterator } from "core-js/library/es6/symbol";
 import { ConstructionLoanApplicationForm } from "./components/ConstructionLoanApplicationForm.tsx/ConstructionLoanApplicationForm";
 import Root from "./root.component";
 
-describe("Root component", () => {
-  it("should be in the document", () => {
-    const { getByText } = render(<Root name="Testapp" />);
-    expect(getByText(/Testapp is mounted!/i)).toBeInTheDocument();
-  });
-});
+// describe("Root component", () => {
+//   it("should be in the document", () => {
+//     const { getByText } = render(<Root name="Testapp" />);
+//     expect(getByText(/Testapp is mounted!/i)).toBeInTheDocument();
+//   });
+// });
 
 // This test is making sure that the form properly capotured and set the value of firstName in local storage to a not null or undefined value
 // Currently this test
