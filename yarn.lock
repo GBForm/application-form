@@ -5973,6 +5973,11 @@
   dependencies:
     "kind-of" "^6.0.2"
 
+"shc-form-test@^1.0.1":
+  "integrity" "sha512-vojXdibkYeZZWcmKJu20a7vXILfuixCVzJHhYb8DQixIQS4sc5cV1VP3U5hw9Mcvye9FUvat4z9E7u/tqOP4jw=="
+  "resolved" "https://registry.npmjs.org/shc-form-test/-/shc-form-test-1.0.1.tgz"
+  "version" "1.0.1"
+
 "shebang-command@^2.0.0":
   "integrity" "sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA=="
   "resolved" "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz"

@@ -7,7 +7,7 @@ export default function Root(props) {
         <ConstructionLoanApplicationForm />
       </div>
       <div>
-        <LoanApplicationCompanyModule />
+        {/* <LoanApplicationCompanyModule /> */}
       </div>
      
     </>

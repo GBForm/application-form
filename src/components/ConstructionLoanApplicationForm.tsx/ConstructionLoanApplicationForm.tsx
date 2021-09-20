@@ -7,8 +7,11 @@ import {
   MyFormProps,
 } from "./iConstructionLoanApplicationForm";
 import "./ConstructionLoanApplicationForm.css";
+import { mount, unmount } from "../../built-loan-application";
 // import {useHistory } from "react-router";
 // import logo from "../Assets/blt-logo-web.svg"
+import { ValidateEmail } from "shc-form-test";
+import { addConstructionLoanForm } from "./ConstructionLoanApplicationProvider";
 
 // Would prefer to not use any here but just putting this together do get the routing for the concept file connected.
 let history: any = null;
@@ -90,18 +93,6 @@ const LoanApplicationForm = withFormik<MyFormProps, FormValues>({
     };
   },
 
-  // Sample Unit test
-
-  // function ValidateEmail(email)
-  // {
-  //  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
-  //   {
-  //     return (true)
-  //   }
-  //     throw new Error("You have entered an invalid email address!")
-  //     return (false)
-  // }
-
   // Add a custom validation function (this can be async too!)
   validate: (values: FormValues) => {
     let errors: FormikErrors<FormValues> = {};
@@ -119,7 +110,15 @@ const LoanApplicationForm = withFormik<MyFormProps, FormValues>({
 
   handleSubmit: (values: FormValues) => {
     // addConstructionLoanForm(values);
-    localStorage.setItem("name", values.firstName);
+    // ValidateEmail(values.email);
+    addConstructionLoanForm(values.firstName);
+    console.log(localStorage.getItem("name"));
+    const unMount = {
+      name: "@built/loan-application",
+    };
+
+    unmount(unMount);
+
     // history.push("./company-info");
   },
 })(InnerForm);

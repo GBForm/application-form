@@ -1,7 +1,7 @@
 import React from "react";
 import { FormValues } from "./iConstructionLoanApplicationForm";
 
-export const addConstructionLoanForm = (loanApp: FormValues) => {
+export const addConstructionLoanForm = (loanApp: string) => {
   // In final concept function will send the form data to the database so it can mee accessed
   // by the success page to pull the users name
   // To be used if a dummie JSON API server MiniApp is used to persist data
@@ -16,6 +16,6 @@ export const addConstructionLoanForm = (loanApp: FormValues) => {
   //   body: JSON.stringify(loanApp),
   // });
   // The following can be taken out once data is being persisted
-  // localStorage.setItem("name", loanApp.firstName);
+  localStorage.setItem("name", loanApp);
   // Currently it pushes data to the FakeApi component
 };
