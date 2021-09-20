@@ -8,7 +8,7 @@ import {
 } from "./iConstructionLoanApplicationForm";
 import "./ConstructionLoanApplicationForm.css";
 import { mount, unmount } from "../../built-loan-application";
-// import {useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
 // import logo from "../Assets/blt-logo-web.svg"
 import { ValidateEmail } from "shc-form-test";
 import { addConstructionLoanForm } from "./ConstructionLoanApplicationProvider";
@@ -19,7 +19,7 @@ let history: any = null;
 const InnerForm = (props: OtherProps & FormikProps<FormValues>) => {
   const { touched, errors, isSubmitting, message } = props;
 
-  // history = useHistory()
+  history = useHistory();
 
   return (
     <>
@@ -109,17 +109,14 @@ const LoanApplicationForm = withFormik<MyFormProps, FormValues>({
   },
 
   handleSubmit: (values: FormValues) => {
-    // addConstructionLoanForm(values);
     // ValidateEmail(values.email);
     addConstructionLoanForm(values.firstName);
-    console.log(localStorage.getItem("name"));
+    // history.push("./success");
     const unMount = {
       name: "@built/loan-application",
     };
-
     unmount(unMount);
-
-    // history.push("./company-info");
+    window.location.reload();
   },
 })(InnerForm);
 
